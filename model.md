@@ -26,7 +26,7 @@ with'\*'.
 Column 7 is a GFA-style ordered path (a comma-separated list of nodes and orientations)
 describing where the read maps to the graph.
 
-Column 8 is a comma-separated list of CIGAR strings (or overlaps) that detail how a read
+Column 8 is a comma-separated list of CS tag strings (or overlaps) that detail how a read
 aligns to each of the nodes in its ordered path.
 
 Columns 9 and above describe SAM-style tags in the 'tagName:tagType:tagValue' format.

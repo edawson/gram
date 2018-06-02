@@ -27,7 +27,7 @@ struct GramRecord{
     uint32_t length;
     char* qualities;
     std::vector<char*> path;
-    std::vector<char*> cigars;
+    std::vector<char*> mappings;
     std::vector<gram_tag_elem> tags;
     std::bitset<32> flags;
     bool isMapped(){
@@ -36,12 +36,32 @@ struct GramRecord{
     void isMapped(bool m){
 
     };
+
     bool isSoftclipped(){
         
     };
-    void isMapped(bool m){
+    void isSoftclipped(bool s){
 
-    }
+    };
+    bool isPaired(){
+
+    };
+    void isPaired(bool p){
+
+    };
+    bool properOrientation(){
+
+    };
+    void properOrientation(bool p){
+
+    };
+    bool largeDeletion(){
+
+    };
+    void largeDeletion(bool d){
+
+    };
+
     
     GramRecord();
     GramRecord(string line);
