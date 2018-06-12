@@ -7,7 +7,9 @@
 #include <string>
 
 struct gram_tag_elem{
-
+    char* key;
+    char* type;
+    void* value;
 };
 
 
@@ -16,6 +18,8 @@ struct gram_header_elem{
     char* type;
     void* val;
 };
+
+
 
 struct GramRecord{
     
@@ -29,7 +33,7 @@ struct GramRecord{
     std::vector<char*> path;
     std::vector<char*> mappings;
     std::vector<gram_tag_elem> tags;
-    std::bitset<32> flags;
+    uint64_t boolean flags = 0;
     bool isMapped(){
         
     };

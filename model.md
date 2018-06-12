@@ -42,8 +42,6 @@ f: a (32-bit) signed float
 F: a (64-bit) signed float
 
 
-
-
 ## Features
 
 - Sequences may be kept in an external FASTA file (useful for long reads).
@@ -67,3 +65,14 @@ is a valid GRAM record:
  - SC:i number of softclipped bases
  - MQ:i mapping quality
  - FQ:Z FASTA/Q file containing read sequence (not required for omitting sequence)
+
+## The GRAB (Graph read alignment, binary) format
+GRAB exists to compress GRAM to a smaller format (i.e. it has the same relationship 
+to GRAM as SAM does to BAM and VCF does to BCF).
+
+GRAB has the following changes compared to GRAM:
+Begins with a magic.
+Followed by the number of headers.
+Followed by the number of records.
+No prepended 'A' before alignments.
+
