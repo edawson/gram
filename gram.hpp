@@ -22,7 +22,7 @@ struct gram_header_elem{
 
 
 struct GramRecord{
-    
+
     char* contig;
     uint32_t start;
     uint32_t end;
@@ -35,14 +35,14 @@ struct GramRecord{
     std::vector<gram_tag_elem> tags;
     uint64_t boolean flags = 0;
     bool isMapped(){
-        
+
     };
     void isMapped(bool m){
 
     };
 
     bool isSoftclipped(){
-        
+
     };
     void isSoftclipped(bool s){
 
@@ -66,16 +66,32 @@ struct GramRecord{
 
     };
 
-    
-    GramRecord();
-    GramRecord(string line);
 
-    bool compare(const GramRecord& other);
-    void write_to_stream(ostream& os);
-    string collapsed_cigar();
-    string to_string();
-    string to_SAM(string ref_path);
-    string to_BED();
+    GramRecord(){
+
+    };
+    GramRecord(string line){
+
+    };
+
+    bool compare(const GramRecord& other){
+
+    };
+    friend std::ostream operator<<(ostream& os, GramRecord& g){
+
+    };
+    string collapsed_cigar(){
+
+    };
+    string to_string(){
+
+    };
+    string to_SAM(string ref_path){
+
+    };
+    string to_BED(){
+
+    };
 };
 
 
@@ -94,5 +110,10 @@ inline void parseFromGAM(char* line, GramRecord& g){
 inline void parseFromGAM(string line, GramRecord& g){
 
 };
+
+inline std::ostream write_to_stream(std::ostream& os, GramRecord& g){
+
+};
+}
 
 #endif
